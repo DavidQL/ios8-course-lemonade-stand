@@ -13,6 +13,7 @@
 		63B09E2319F2DAC900BAAB5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63B09E2219F2DAC900BAAB5E /* Images.xcassets */; };
 		63B09E2619F2DAC900BAAB5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B09E2419F2DAC900BAAB5E /* LaunchScreen.xib */; };
 		63B09E3219F2DAC900BAAB5E /* Lemonade_StandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B09E3119F2DAC900BAAB5E /* Lemonade_StandTests.swift */; };
+		63B09E3D19F2DB6200BAAB5E /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B09E3C19F2DB6200BAAB5E /* Customer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		63B09E2B19F2DAC900BAAB5E /* Lemonade StandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lemonade StandTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B09E3019F2DAC900BAAB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63B09E3119F2DAC900BAAB5E /* Lemonade_StandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lemonade_StandTests.swift; sourceTree = "<group>"; };
+		63B09E3C19F2DB6200BAAB5E /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		63B09E1819F2DAC800BAAB5E /* Lemonade Stand */ = {
 			isa = PBXGroup;
 			children = (
+				63B09E3B19F2DB3F00BAAB5E /* Models */,
 				63B09E1B19F2DAC800BAAB5E /* AppDelegate.swift */,
 				63B09E1D19F2DAC900BAAB5E /* ViewController.swift */,
 				63B09E1F19F2DAC900BAAB5E /* Main.storyboard */,
@@ -110,6 +113,14 @@
 				63B09E3019F2DAC900BAAB5E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63B09E3B19F2DB3F00BAAB5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				63B09E3C19F2DB6200BAAB5E /* Customer.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B09E3D19F2DB6200BAAB5E /* Customer.swift in Sources */,
 				63B09E1E19F2DAC900BAAB5E /* ViewController.swift in Sources */,
 				63B09E1C19F2DAC800BAAB5E /* AppDelegate.swift in Sources */,
 			);
