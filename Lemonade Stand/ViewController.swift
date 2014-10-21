@@ -72,5 +72,38 @@ class ViewController: UIViewController {
         lemonsInRecipeCountLabel.text = "\(lemonsInRecipeCount)"
         iceInRecipeCountLabel.text = "\(iceInRecipeCount)"
     }
+    @IBAction func startDayPressed(sender: AnyObject) {
+        
+        if (lemonsInRecipeCount == 0 || iceInRecipeCount == 0) {
+            var alert = UIAlertController(title: "Earnings", message: "You must use at least 1 of each ingredient", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Fine", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            var daysRatio = lemonsInRecipeCount / iceInRecipeCount
+            var earnings:Double = 0
+            for customer in customers {
+                if customer.preferredRatio > 0.5 && daysRatio > 0.5 {
+                    earnings++
+                } else if customer.preferredRatio <= 0.5 && daysRatio <= 0.5 {
+                    earnings++
+                }
+            }
+            var alert = UIAlertController(title: "Earnings", message: "You earned $\(earnings) today", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            accountBalance += earnings
+            lemonsCount -= lemonsInRecipeCount
+            iceCount -= iceInRecipeCount
+            updateMainView()
+            
+            // reset customers
+            for (var i = 0; i<10; i++) {
+                customers[0] = Customer()
+            }
+        }
+        
+
+    }
 }
 
